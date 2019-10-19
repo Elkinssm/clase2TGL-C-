@@ -20,6 +20,12 @@ namespace TGL.WebApp.Pages.Students
             StudentStore = studentStore;
             Students = StudentStore.GetStudents();
         }
+
+        public IActionResult OnPostDelete(Guid id)
+        {
+            StudentStore.DeleteStudent(id);
+            return RedirectToPage();
+        }
         public void OnGet()
         {
         }
