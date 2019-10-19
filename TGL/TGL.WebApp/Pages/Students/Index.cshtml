@@ -1,0 +1,10 @@
+﻿@page
+@model TGL.WebApp.Pages.Students.IndexModel
+@{
+}
+
+@foreach (var item in Model.Students)
+{
+    @item.Id
+    @item.Name
+}
